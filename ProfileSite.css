@@ -106,6 +106,10 @@ html {
   border: solid 2px #373737;
 }
 
+img {
+    image-orientation: from-image;
+}
+
 .avatar_container {
   /*background-color: blue;*/
   height: 15vw;
