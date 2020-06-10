@@ -1,0 +1,25 @@
+.ActiveLink {
+  background-color: #373737;
+  color: white;
+}
+
+.ActiveLink a, .ActiveLink a:visited, .ActiveLink a:link {
+  background-color: #373737;
+  color: white;
+}
+
+.InActiveLink {
+  background-color: white;
+  color: #373737;
+}
+
+.InActiveLink a, .InActiveLink a:visited, .InActiveLink a:link {
+  background-color: white;
+  color: #373737;
+}
+
+.InActiveLink:hover, .InActiveLink:hover a {
+  background-color: #373737;
+  color: white;
+}
+
