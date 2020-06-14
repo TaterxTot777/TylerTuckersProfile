@@ -6,26 +6,32 @@
     <link type="text/css" rel="stylesheet" href="../css/ProfileSite.css" />
     <script src="../js/IncludeHtmlScript.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--Fetch the header and nav inner html, append to header and nav elements-->
+    <script>
+
+    fetch("https://tucke102.github.io/TylerTuckersProfile/Pages/header.html")
+      .then(response => {
+        return response.text();
+    })
+      .then(data => {
+        document.querySelector("header").innerHTML = data;
+    });
+      
+    fetch("https://tucke102.github.io/TylerTuckersProfile/Pages/nav.html")
+      .then(response => {
+        return response.text();
+    })
+      .then(data => {
+        document.querySelector("nav").innerHTML = data;
+    });
+    </script>
+    
   </head>
 
 <body>
-  <div class="grid-header">
-    <div class="Grid_HeaderLeft">
-        <h1>Tyler Tucker's Profile</h1>
-        <p class="ProfileLabel"> Full-Stack Developer</p>
-    </div>
-      <div class="Grid_HeaderRight">
-        <img src="../Imgs/ProfilePicture.JPG" class="avatar">
-      </div>    
-  </div>
-  <div class="Grid_Nav">
-    <ul class="nav">
-      <li><a href="index.html">Home Page</a></li>
-      <li><a href="Resume.html">Resume</a></li>
-      <li><a href="WorkExamples.html">Work Examples</a></li>
-      <li style="float:right"><a href="#about">About</a></li>
-    </ul>
-  </div>
+  <header></header>
+  <nav class="Grid_Nav"></nav>
 
   <div class="grid_body" style="margin-top: 25px;">
     <div class="Grid_Main">
