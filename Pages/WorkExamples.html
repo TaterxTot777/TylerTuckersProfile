@@ -3,7 +3,6 @@
 
   <head>
     <link type="text/css" rel="stylesheet" href="../css/ProfileSite.css" />
-    <script src="../js/IncludeHtmlScript.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Responsive Video Slider -->
@@ -12,13 +11,33 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Responsive Video Slider JS -->
     <script src="../js/rvslider.min.js"></script>
+  
+    <script>
 
+    fetch("https://tucke102.github.io/TylerTuckersProfile/Pages/header.html")
+      .then(response => {
+        return response.text();
+    })
+      .then(data => {
+        document.querySelector("header").innerHTML = data;
+    });
+      
+    fetch("https://tucke102.github.io/TylerTuckersProfile/Pages/nav.html")
+      .then(response => {
+        return response.text();
+    })
+      .then(data => {
+        document.querySelector("nav").innerHTML = data;
+    });
+    </script>
+      
   </head>
 
  
 <body>
     
   <header></header>
+  <nav class="Grid_Nav"></nav>
   
   <h1 style="margin-top: 25px; margin-bottom: 25px;">College Projects</h1>
   
@@ -136,15 +155,6 @@
     });
   </script>  
 
-  <script>
-      fetch("header.html")
-        .then(response => {
-          return response.text();
-      })
-        .then(data => {
-          document.querySelector("header").innerHTML = data;
-      });
-  </script>
   
 </body>
 </html>
