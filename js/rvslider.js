@@ -145,6 +145,9 @@
 		this.diff = [0,0];
 		this.width = 0;
 		this.height = 0;
+		
+		//MODIFICATION
+		console.log("Total Count: " + this.count);
 	};
 
 	FP.RVSliderItems.prototype.destroy = function(){
@@ -179,6 +182,11 @@
 
 	FP.RVSliderItems.prototype.setActive = function(index){
 		if (index >= 0 && index < this.count){
+			
+			//MODIFICATIONS
+			console.log("Selected Index: " + index);
+			DisplayDiscription(index);
+			
 			var self = this, before = this.$.stage.css('transform'), after = matrix(index, this.width);
 			this.$.stage.one('transitionend', function(){
 				self.$.items.removeClass('rvs-active').eq(index).addClass('rvs-active');
@@ -189,6 +197,7 @@
 		} else {
 			this.$.stage.css('transform', 'translateX(-'+(this.rvs.index * this.width)+'px)');
 		}
+		
 	};
 
 	FP.RVSliderItems.prototype.onTouchStart = function(e){
@@ -635,5 +644,6 @@
 		e.preventDefault();
 		e.data.self.close();
 	};
-
+	
 })(jQuery, window.FooPlugins = window.FooPlugins || {});
+

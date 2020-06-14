@@ -5,12 +5,13 @@
     <link type="text/css" rel="stylesheet" href="../css/ProfileSite.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Responsive Video Slider -->
-    <link href="../css/rvslider.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Responsive Video Slider -->
+    <link href="../css/rvslider.min.css" rel="stylesheet">
     <!-- Responsive Video Slider JS -->
-    <script src="../js/rvslider.min.js"></script>
+    <script src="../js/rvslider.js"></script>
   
   
     <!--Fetch the header and nav inner html, append to header and nav elements-->
@@ -43,13 +44,12 @@
   
   
   <h1 style="margin-top: 25px; margin-bottom: 25px;">College Projects</h1>
-  
   <div class="rvs-container">
     <div class="rvs-item-container">
       <div class="rvs-item-stage">
-        <div class="rvs-item" style="background-image: url(https://i.ytimg.com/vi/YqeW9_5kURI/maxresdefault.jpg)">
+        <div class="rvs-item" style="background-image: url(https://i.ytimg.com/vi/V8NLgxnVg6U/maxresdefault.jpg)">
           <p class="rvs-item-text">Major Lazer &amp; DJ Snake - Lean On (feat. MØ) (Official Music Video) <small>by majorlazer</small></p>
-          <a href="http://youtu.be/YqeW9_5kURI" class="rvs-play-video"></a>
+          <a href="https://youtu.be/V8NLgxnVg6U" class="rvs-play-video"></a>
         </div>
         <div class="rvs-item" style="background-image: url(https://i.ytimg.com/vi/RgKAFK5djSk/maxresdefault.jpg)">
           <p class="rvs-item-text">Wiz Khalifa - See You Again ft. Charlie Puth [Official Video] Furious 7 Soundtrack <small>by Wiz Khalifa</small></p>
@@ -93,7 +93,7 @@
       <a class="rvs-nav-prev"></a>
       <div class="rvs-nav-stage">
         <a class="rvs-nav-item">
-          <span class="rvs-nav-item-thumb" style="background-image: url(https://i.ytimg.com/vi/YqeW9_5kURI/default.jpg)"></span>
+          <span class="rvs-nav-item-thumb" style="background-image: url(https://i.ytimg.com/vi/V8NLgxnVg6U/default.jpg)"></span>
           <h4 class="rvs-nav-item-title">Major Lazer &amp; DJ Snake - Lean On (feat. MØ) (Official Music Video)</h4>
           <small class="rvs-nav-item-credits">by majorlazer</small>
         </a>
@@ -146,6 +146,18 @@
       <a class="rvs-nav-next"></a>
     </div>
   </div>
+
+
+  
+  
+  
+  
+  <div class="Slider_Description_Container">
+    <h1>Description</h1>
+    <div id="Slider_Content">
+      <p> This is slider 1 description</p>
+    </div>
+  </div>
   
   <p style="padding-top: 600px;">asda</p>
   
@@ -153,6 +165,21 @@
   
 
   <script>
+    var SliderItemsDescription = [
+      "<p>Operation Inmate was an attack by the British Pacific Fleet against Japanese positions on the isolated islands of Truk Atoll in the central Pacific Ocean during the Second World War. On 14 June 1945, British aircraft from the aircraft carrier HMS Implacable conducted a series of raids against Japanese positions. The next morning, several islands were bombarded by British and Canadian cruisers, though with little success. Further air strikes took place in the afternoon and night of 15 June before the Allied force returned to its base. The attacks were conducted to provide combat experience ahead of the fleet's involvement in more demanding operations off the Japanese home islands. The attack was considered successful by the Allies, with ships and air units gaining useful experience while suffering two fatalities and the loss of seven aircraft to combat and accidents. The damage to the Japanese facilities in the atoll was</p>",
+      "<p>This is slider 2 description</p>",
+      "<p>This is slider 3 description</p>",
+      "<p>This is slider 4 description</p>",
+      "<p>This is slider 5 description</p>"
+    ];
+    
+    function DisplayDiscription(index) {
+      
+      if (index < SliderItemsDescription.length && index >= 0) {
+        $("#Slider_Content").html(SliderItemsDescription[index]);
+      }
+    }
+
     jQuery(function($){
       $('.rvs-container').rvslider();
     });
