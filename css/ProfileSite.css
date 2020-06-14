@@ -9,6 +9,8 @@
   --nav-theme-color2: white;
   --main-theme-color1: #303030;
   --main-theme-color2: white;
+  --slider-image-width: 80vw;
+  --slider-image-heigth: 70vh;
 }
 
 
@@ -188,12 +190,13 @@ img {
 .button-container {
   top: -40px;
   position: relative;
-  
+  margin-left: 40%;
+  margin-right: 40%;
 }
 
 .slider-container {
-  width: 800px;
-  height: 600px;
+  width: var(--slider-image-width);
+  height: var(--slider-image-heigth);
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
@@ -201,8 +204,8 @@ img {
 }
 
 .image-container {
-  width: 2400px;
-  height: 600px;
+  width: calc(var(--slider-image-width) * 3);
+  height: var(--slider-image-heigth);
   transition: left 1s;
   position: relative;
   -webkit-transition: left 1s;
@@ -214,8 +217,8 @@ img {
   float: left;
   margin: 0px;
   padding: 0px;
-  width: 800px;
-  height: 600px;
+  width: var(--slider-image-width);
+  height: var(--slider-image-heigth);
 }
 .slider-button {
   display: inline-block;
@@ -229,15 +232,15 @@ img {
 }
 
 #slider-image-1:target ~ .image-container {
-  left:  0px;
+  left:  calc(var(--slider-image-width) - var(--slider-image-width));
 }
 
 #slider-image-2:target ~ .image-container {
-  left:  -800px;
+  left:  calc(var(--slider-image-width) * -1);
 }
 
 #slider-image-3:target ~ .image-container {
-  left:  -1600px;
+  left:  calc(var(--slider-image-width) * -2);
 }
 
 
