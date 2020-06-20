@@ -199,6 +199,11 @@ img {
   font-size: 3vw;
 }
 
+.Slider_Description_Container h2{
+  color: var(--main-theme-color2);
+  font-size: 2vw;
+}
+
 
 
 
