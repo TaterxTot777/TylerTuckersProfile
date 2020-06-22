@@ -189,19 +189,22 @@ img {
   background-color: var(--main-theme-color1);
 }
 .Slider_Description_Container p {
-  color: var(--main-theme-color2);
+  color: var(--main-theme-color1);
+  background-color: var(--main-theme-color2);
+  padding: 5px;
   font-size: 3vh;
+  border-radius: 15px;
 }
 
 .Slider_Description_Container h1{
   color: var(--main-theme-color2);
   margin: 0px;
-  font-size: 3vw;
+/*  font-size: 6vw;*/
 }
 
-.Slider_Description_Container h2{
+.Slider_Description_Container h3{
   color: var(--main-theme-color2);
-  font-size: 2vw;
+/*  font-size: 4vw;*/
 }
 
 

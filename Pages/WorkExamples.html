@@ -45,6 +45,10 @@
   <div class="rvs-container">
     <div class="rvs-item-container">
       <div class="rvs-item-stage">
+        <div class="rvs-item" style="background-image: url(https://i.ytimg.com/vi/vwwnTPfe-wE/maxresdefault.jpg)">
+          <p class="rvs-item-text">Game Key Local Hosted Website <small>by Tyler Tucker</small></p>
+          <a href="https://youtu.be/vwwnTPfe-wE" class="rvs-play-video"></a>
+        </div>
         <div class="rvs-item" style="background-image: url(https://i.ytimg.com/vi/C9C-TE-i7oo/maxresdefault.jpg)">
           <p class="rvs-item-text">Simple Math Mobile Game (Xamarin) <small>by Tyler Tucker</small></p>
           <a href="https://youtu.be/C9C-TE-i7oo" class="rvs-play-video"></a>
@@ -58,6 +62,11 @@
     <div class="rvs-nav-container">
       <a class="rvs-nav-prev"></a>
       <div class="rvs-nav-stage">
+        <a class="rvs-nav-item">
+          <span class="rvs-nav-item-thumb" style="background-image: url(https://i.ytimg.com/vi/vwwnTPfe-wE/default.jpg)"></span>
+          <h4 class="rvs-nav-item-title">Game Key Local Hosted Website</h4>
+          <small class="rvs-nav-item-credits">by Tyler Tucker</small>
+        </a>
         <a class="rvs-nav-item">
           <span class="rvs-nav-item-thumb" style="background-image: url(https://i.ytimg.com/vi/C9C-TE-i7oo/default.jpg)"></span>
           <h4 class="rvs-nav-item-title">Simple Math Mobile Game (Xamarin)</h4>
@@ -91,26 +100,40 @@
 
   <script>
     var SliderItemsDescription = [
-      "<h2>(College Project)</h2>" + //example 1
+      "<h3>(College Project)</h2>" + //example 1
+        "<button>HTML</button><button>CSS</button><button>Javascript</button><button>PHP</button><button>MAMP</button><button>Apache</button><button>MySQL</button>" +
+        "<p>This was another project I did in college where I built a locally hosted website from the ground up with cart functionality" +
+        " in mind. I used MAMP to run apache and MySQL services to host the website and it was built using HTML, CSS, Javascript and" +
+        " PHP to keep the content between client and server secure. The site also stored cookies for the user." +
+        "</p>" +
+        "<p>In order to buy products, a user would need to sign up for an account and-or login. The site had ajax search" +
+        " functionality for the search bar and the backend was built with filters in mind. This was a full web application" +
+        " so an admin could sign into the root account and preform extra functionality on the site such as add more products and" +
+        " view order history and details. The app would also email the user a simple receipt with their code for the game." +
+        "</p>",
+      "<h3>(College Project)</h2>" + //example 2
         "<button>Xamarin</button><button>C#</button><button>XAML</button><button>Sqlite</button>" +
         "<p>This is a simple mobile math game app I created for a college class where you get to do some mental math" +
           " calculations for fun and earn a score based on time and difficulty. The score and player data is stored via sqlite so" +
           " the user can save their progress. The game also tracks some basic stats we thought would be fun to see at the time." +
         "</p>",
-      "<h2>(Project for a Friend)</h2>" + //example 2
-        "<button>Java Forms App</button><button>Sqlite</button>" +
+      "<h3>(Project for a Friend)</h2>" + //example 3
+        "<button>Java</button><button>Forms App</button><button>Sqlite</button>" +
         "<p>This is a very simple java application I made for a friend who worked for an insurance company. I basically" +
           " converted his physical data into a Java application he can use to more easily calculate various packages and pricing for" +
           " a potential client said friend would be selling to. Before, this friend would have to manually look through large columns" +
           " of data on paper and (based on age and package selection) add up values by hand (Say with a native calculator app" +
           " on their phone). This allowed my friend to select specific packages based on the pulled age range of the client by" +
           " just clicking the various package cells." +
-        "</p>",
-      "<p>This is slider 3 description</p>",
-      "<p>This is slider 4 description</p>",
-      "<p>This is slider 5 description</p>"
+        "</p>"
     ];
     
+    
+    
+
+
+
+
     function DisplayDiscription(index) {
       
       if (index < SliderItemsDescription.length && index >= 0) {
