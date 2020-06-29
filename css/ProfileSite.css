@@ -58,6 +58,16 @@
   padding: 0px;
 }
 
+.Grid_Main_L { grid-area: Left; }
+.Grid_Main_R { grid-area: Right; }
+.grid-screenshot {
+  display: grid;
+  grid-template-areas:
+    ' Left Right';
+  grid-gap: 10px;
+  padding: 0px;
+}
+
 .grid_body {
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
@@ -191,10 +201,17 @@ img {
 .Slider_Description_Container p {
   color: var(--main-theme-color1);
   background-color: var(--main-theme-color2);
-  padding: 5px;
+  padding: 10px;
   font-size: 3vh;
   border-radius: 15px;
 }
+
+.Slider_Description_Container i {
+  color: var(--main-theme-color2);
+  padding: 5px;
+  font-size: 2vh;
+}
+
 
 .Slider_Description_Container h1{
   color: var(--main-theme-color2);
